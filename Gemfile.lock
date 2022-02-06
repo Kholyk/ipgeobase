@@ -41,10 +41,10 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
-  addressable (~> 2.8)
+  addressable
   ipgeobase!
   minitest (~> 5.0)
-  nokogiri-happymapper (~> 0.9)
+  nokogiri-happymapper
   rake (~> 13.0)
   rubocop (~> 1.21)
 

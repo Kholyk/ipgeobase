@@ -11,6 +11,6 @@ gem "minitest", "~> 5.0"
 
 gem "rubocop", "~> 1.21"
 
-gem "addressable", "~>2.8"
+gem "addressable"
 
-gem "nokogiri-happymapper", "~>0.9"
+gem "nokogiri-happymapper"
