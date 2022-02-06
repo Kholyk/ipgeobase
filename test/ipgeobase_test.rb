@@ -17,7 +17,6 @@ class IpgeobaseTest < Minitest::Test
   end
 
   def test_include
-    # Ipgeobase.class == 'Module'
     assert @geobase_object.city == 'St Petersburg'
   end
 end
