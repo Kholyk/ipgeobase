@@ -5,7 +5,6 @@ require "net/http"
 require "addressable/uri"
 require "addressable/template"
 require_relative "meta"
-require "happymapper"
 
 module Ipgeobase
   class Error < StandardError; end
