@@ -28,7 +28,19 @@ class IpgeobaseTest < Minitest::Test
     assert @geobase_object.country == "Russia"
   end
 
+  def test_country_code
+    assert @geobase_object.countryCode == "RU"
+  end
+
   def test_city
     assert @geobase_object.city == "St Petersburg"
+  end
+
+  def test_lat
+    assert @geobase_object.lat == 59.8983
+  end
+
+  def test_lon
+    assert @geobase_object.lon == 30.2618
   end
 end
