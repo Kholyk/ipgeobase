@@ -4,6 +4,7 @@ require "test_helper"
 
 class IpgeobaseTest < Minitest::Test
   def setup
+    raw_response_file = File.new("./test/response.txt")
     stub_request(:get, "http://ip-api.com/xml/?query=188.243.183.134")
       .with(
         headers: {
@@ -11,26 +12,7 @@ class IpgeobaseTest < Minitest::Test
           "Accept-Encoding" => "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
           "User-Agent" => "Ruby"
         }
-      )
-      .to_return(status: 200, body: "
-    <query>
-      <status>success</status>
-      <country>Russia</country>
-      <countryCode>RU</countryCode>
-      <region>SPE</region>
-      <regionName>St.-Petersburg</regionName>
-      <city>St Petersburg</city>
-      <zip>190098</zip>
-      <lat>59.8983</lat>
-      <lon>30.2618</lon>
-      <timezone>Europe/Moscow</timezone>
-      <isp>SkyNet LLC</isp>
-      <org>SkyNet Networks</org>
-      <as>AS35807 SkyNet Ltd.</as>
-      <query>188.243.183.134</query>
-    </query>
-    ", headers: {})
-
+      ).to_return(status: 200, body: File.open(raw_response_file), headers: {})
     @geobase_object = Ipgeobase.lookup("188.243.183.134")
   end
 
