@@ -14,3 +14,5 @@ gem "rubocop", "~> 1.21"
 gem "addressable"
 
 gem "nokogiri-happymapper"
+
+gem "webmock"
