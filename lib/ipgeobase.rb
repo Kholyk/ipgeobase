@@ -6,6 +6,7 @@ require "addressable/uri"
 require "addressable/template"
 require_relative "meta"
 
+# Returns Metadata object
 module Ipgeobase
   class Error < StandardError; end
 
