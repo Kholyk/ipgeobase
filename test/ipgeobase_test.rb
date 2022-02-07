@@ -20,27 +20,19 @@ class IpgeobaseTest < Minitest::Test
     refute_nil ::Ipgeobase::VERSION
   end
 
-  def test_it_does_something_useful
-    assert true
-  end
-
-  def test_country
+  def test_country_code
+    assert @geobase_object.countryCode == "RU"
+    assert @geobase_object.city == "St Petersburg"
     assert @geobase_object.country == "Russia"
   end
 
-  def test_country_code
-    assert @geobase_object.countryCode == "RU"
-  end
-
-  def test_city
-    assert @geobase_object.city == "St Petersburg"
-  end
-
   def test_lat
-    assert @geobase_object.lat == 59.8983
+    assert @geobase_object.lat.to_s == "59.8983"
+    assert @geobase_object.lat.instance_of? Float
   end
 
   def test_lon
-    assert @geobase_object.lon == 30.2618
+    assert @geobase_object.lon.to_s == "30.2618"
+    assert @geobase_object.lon.instance_of? Float
   end
 end
