@@ -1,0 +1,16 @@
+<query>
+      <status>success</status>
+      <country>Russia</country>
+      <countryCode>RU</countryCode>
+      <region>SPE</region>
+      <regionName>St.-Petersburg</regionName>
+      <city>St Petersburg</city>
+      <zip>190098</zip>
+      <lat>59.8983</lat>
+      <lon>30.2618</lon>
+      <timezone>Europe/Moscow</timezone>
+      <isp>SkyNet LLC</isp>
+      <org>SkyNet Networks</org>
+      <as>AS35807 SkyNet Ltd.</as>
+      <query>188.243.183.134</query>
+</query>
