@@ -2,6 +2,7 @@
 
 require "test_helper"
 require "ipgeobase"
+require 'webmock/minitest'
 
 class IpgeobaseTest < Minitest::Test 
   def setup
