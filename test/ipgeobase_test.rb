@@ -2,9 +2,11 @@
 
 require "test_helper"
 
+# test
 class IpgeobaseTest < Minitest::Test
   def setup
-    raw_response_file = File.new("./test/response.txt")
+    sample = get_fixture_content("response")
+
     stub_request(:get, "http://ip-api.com/xml/?query=188.243.183.134")
       .with(
         headers: {
@@ -12,7 +14,8 @@ class IpgeobaseTest < Minitest::Test
           "Accept-Encoding" => "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
           "User-Agent" => "Ruby"
         }
-      ).to_return(status: 200, body: File.open(raw_response_file), headers: {})
+      ).to_return(status: 200, body: sample, headers: {})
+
     @geobase_object = Ipgeobase.lookup("188.243.183.134")
   end
 

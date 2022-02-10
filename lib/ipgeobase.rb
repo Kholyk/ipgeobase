@@ -4,10 +4,11 @@ require_relative "ipgeobase/version"
 require "net/http"
 require "addressable/uri"
 require "addressable/template"
-require_relative "meta"
 
 # Returns Metadata object
 module Ipgeobase
+  require_relative "ipgeobase/meta"
+  
   class Error < StandardError; end
 
   def self.lookup(ip_address)
