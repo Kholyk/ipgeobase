@@ -8,7 +8,7 @@ require "addressable/template"
 # Returns Metadata object
 module Ipgeobase
   require_relative "ipgeobase/meta"
-  
+
   class Error < StandardError; end
 
   def self.lookup(ip_address)
